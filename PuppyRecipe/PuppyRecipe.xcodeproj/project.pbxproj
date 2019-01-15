@@ -14,6 +14,8 @@
 		EE2A04E621EE6216008C3AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2A04E421EE6216008C3AB3 /* LaunchScreen.storyboard */; };
 		EE2A04F021EE6239008C3AB3 /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A04EF21EE6238008C3AB3 /* RecipeService.swift */; };
 		EE2A04F221EE624F008C3AB3 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2A04F121EE624F008C3AB3 /* Recipe.swift */; };
+		EE695A9821EE63FA0021ABE1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE695A9621EE63FA0021ABE1 /* TableViewCell.swift */; };
+		EE695A9921EE63FA0021ABE1 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE695A9721EE63FA0021ABE1 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EE2A04E721EE6216008C3AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE2A04EF21EE6238008C3AB3 /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
 		EE2A04F121EE624F008C3AB3 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		EE695A9621EE63FA0021ABE1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		EE695A9721EE63FA0021ABE1 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				EE2A04E221EE6216008C3AB3 /* Assets.xcassets */,
 				EE2A04E421EE6216008C3AB3 /* LaunchScreen.storyboard */,
 				EE2A04E721EE6216008C3AB3 /* Info.plist */,
+				EE695A9621EE63FA0021ABE1 /* TableViewCell.swift */,
+				EE695A9721EE63FA0021ABE1 /* TableViewCell.xib */,
 			);
 			path = PuppyRecipe;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE2A04E621EE6216008C3AB3 /* LaunchScreen.storyboard in Resources */,
+				EE695A9921EE63FA0021ABE1 /* TableViewCell.xib in Resources */,
 				EE2A04E321EE6216008C3AB3 /* Assets.xcassets in Resources */,
 				EE2A04E121EE6214008C3AB3 /* Main.storyboard in Resources */,
 			);
@@ -157,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE695A9821EE63FA0021ABE1 /* TableViewCell.swift in Sources */,
 				EE2A04DE21EE6214008C3AB3 /* ViewController.swift in Sources */,
 				EE2A04F021EE6239008C3AB3 /* RecipeService.swift in Sources */,
 				EE2A04DC21EE6214008C3AB3 /* AppDelegate.swift in Sources */,

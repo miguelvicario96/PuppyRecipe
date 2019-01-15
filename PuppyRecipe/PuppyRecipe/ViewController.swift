@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.dataSource = self
         
+        self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
         downloadRecipes()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -31,7 +33,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ViewController: UITableViewDelegate{
@@ -45,8 +46,10 @@ extension ViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
-        cell.textLabel?.text = recipes[indexPath.row].title
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        cell.setData(name: recipes[indexPath.row].title)
+        
         return cell
     }
 }
