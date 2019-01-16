@@ -12,7 +12,7 @@ class RecipeService{
     
     static var urlSession = URLSession(configuration: .default)
     
-    static func fecthRecipes(ingredient: String = "onions,garlic", onSuccess: @escaping ([Recipe]) -> Void){
+    static func fecthRecipes(ingredient: String = "onions", onSuccess: @escaping ([Recipe]) -> Void){
         let url = URL(string: "http://www.recipepuppy.com/api/?i=\(ingredient)&q=sauce&p=3")
         
         let dataTask = urlSession.dataTask(with: url!){data, response, error in
