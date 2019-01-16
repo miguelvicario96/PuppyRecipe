@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 struct Recipe{
+    /*
+     
+     Estructura en la que se guardaran los datos provenientes de un diccionario previamente
+     creado a partir del JSON devuelto por la URL
+     
+     */
     
     var title: String
     var href: String

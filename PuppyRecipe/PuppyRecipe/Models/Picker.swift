@@ -10,6 +10,20 @@ import Foundation
 
 class Picker{
     
-    static var pickerData = ["Onion","Garlic","Onion and Garlic"]
+     /*
+ 
+    Clase creada para controlar la información del PickerView para evitar crear variables
+    globales dentro de la clase InitialViewController
+ 
+    */
+    
+    static let pickerData = ["Onion","Garlic","Onion and Garlic"]//Información del PickerView
     static var pickerRowSelected: Int = 0
+    
+    /*
+ 
+    pickerRowSelected se inicializa en cero ya que si no se usa el PickerView por querer usar el primer elemento
+    dara un error ya que nunca se abra mandado a llamar el Delegate y por tanto el didSelectRow
+ 
+    */
 }

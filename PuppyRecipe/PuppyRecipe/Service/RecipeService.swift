@@ -10,6 +10,13 @@ import Foundation
 
 class RecipeService{
     
+    /*
+     
+     Servicio que descarga la información de la URL y nos la entrega ya en un arreglo
+     de Recipes
+ 
+    */
+    
     static var urlSession = URLSession(configuration: .default)
     
     static func fecthRecipes(ingredient: String = "onions", onSuccess: @escaping ([Recipe]) -> Void){

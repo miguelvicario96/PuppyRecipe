@@ -9,12 +9,13 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    //Función que nos ayuda a asignar la información que viene del TextView a los views del XIB
     func setData(name: String){
         textLabel?.text = name
     }
