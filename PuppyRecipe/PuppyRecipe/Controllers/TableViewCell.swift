@@ -15,8 +15,8 @@ class TableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func setData(name: String) {
-            textLabel?.text = name
+    func setData(name: String){
+        textLabel?.text = name
     }
     
 }
