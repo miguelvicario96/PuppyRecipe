@@ -16,6 +16,8 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var webButton: UIButton! //Conexión a UIButton
     @IBOutlet weak var webView: WKWebView! //Conexión a WKWebView
     
+    var ingredientsFromArray: String = "" //Variable usada para el formato de los ingredientes
+    
     //Variables usadas para el paso de información del TextView a este controlador
     var recipeTitle: String!
     var ingredients: String!
@@ -24,8 +26,11 @@ class DetailViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Llamado a formatIngredient pasandole la información de los ingredientes obtenida de la URL
+        formatIngredient(ingredient: ingredients)
         setData() //Llamado a setData()
         
+        print(ingredients)
         //Configuración de preferencias del webView
         let webViewPrefs = WKPreferences()
         webViewPrefs.javaScriptEnabled = true
@@ -38,11 +43,25 @@ class DetailViewController: UIViewController{
         ingredientsTextView.flashScrollIndicators() //Muestra del scroll del TextView
     }
     
-    func setData(){ //Formato de datos a los ingredients devueltos por la URL y su asignación a los views correspondientes
+    func setData(){ //Asignación a los views correspondientes
         titleLabel.text = recipeTitle
-        //Se cambian las "," por saltos de línea
-        let formatIngredient = ingredients.replacingOccurrences(of: ",", with: "\n")
-        ingredientsTextView.text = formatIngredient
+        ingredientsTextView.text = ingredientsFromArray
+    }
+    
+    //Función que nos devuelve los ingredientes obtenios de la URL con un formato mas agradable visualmente
+    func formatIngredient(ingredient: String){
+        
+        let element = ingredient.split(separator: ",")
+        
+        for eachElement in element{
+            let capitalizedElement = eachElement.capitalized
+            if eachElement == element[0]{
+                ingredientsFromArray = "- " + capitalizedElement
+            }
+            else{
+                ingredientsFromArray = ingredientsFromArray + "\n-\(capitalizedElement)"
+            }
+        }
     }
     
     @IBAction func webAction(_ sender: Any) { //Botón que activa el webView
